@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL maintainer="Ronin ronin@ravenclaw.com"
 LABEL description="Test image"
 
-ENV PHPVERSION 7
+ENV PHPVERSION 5
 
 RUN exec apk add --update apache2 php${PHPVERSION}-apache2 php${PHPVERSION} && \    rm -rf /var/cache/apk/* && \
     mkdir /run/apache2/ && \
